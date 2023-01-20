@@ -1,4 +1,4 @@
-package org.framework.bdd.controller;
+package org.framework.bdd.steps;
 
 public abstract class AbstractSteps {
 }

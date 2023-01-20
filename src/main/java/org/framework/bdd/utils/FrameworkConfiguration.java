@@ -1,4 +1,11 @@
 package org.framework.bdd.utils;
 
-public class FrameworkConfiguration {
+import org.aeonbits.owner.Config;
+
+@Config.LoadPolicy(Config.LoadType.MERGE)
+@Config.Sources("file:${user.dir}/src/main/resporces/config.properties")
+public interface FrameworkConfiguration extends Config {
+    @Key("${environment}.base-uri")
+    String baseUri();
+
 }
