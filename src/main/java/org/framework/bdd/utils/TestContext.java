@@ -9,6 +9,11 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static java.lang.ThreadLocal.withInitial;
 
+/*
+    credits: https://medium.com/@bcarunmail/sharing-state-between-cucumber-step-definitions-using-java-and-spring-972bc31117af
+    The TestContext enum allows us to share test data in-between cucumber bdd steps in a thread-safe manner.
+    In this case we are using it to share payload, requests and response objects.
+ */
 public enum TestContext {
     CONTEXT;
 
