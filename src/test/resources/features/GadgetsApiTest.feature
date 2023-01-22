@@ -8,5 +8,5 @@ Feature: Gadgets API tests
 
     Examples:
     | id | name |
-    | 2  | Apple MacBook Pro 16 |
-    | 7  | Apple MacBook Pro 16 |
+    | 2  | Apple iPhone 12 Mini, 256GB, Blue |
+    | 7  | Apple MacBook Pro 20 |

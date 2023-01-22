@@ -1,11 +1,11 @@
 package org.framework.bdd.utils;
 
 import lombok.experimental.UtilityClass;
-import org.aeonbits.owner.ConfigFactory;
+import org.aeonbits.owner.ConfigCache;
 
 @UtilityClass
-public class ConfigurationFactory {
+public class ConfigFactory {
     public static FrameworkConfiguration getConfig() {
-        return ConfigFactory.create(FrameworkConfiguration.class);
+        return ConfigCache.getOrCreate(FrameworkConfiguration.class);
     }
 }

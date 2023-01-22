@@ -7,7 +7,7 @@ import io.cucumber.java.en.When;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.framework.bdd.models.Gadget;
-import org.framework.bdd.utils.ConfigurationFactory;
+import org.framework.bdd.utils.ConfigFactory;
 import org.junit.Assert;
 
 import static io.restassured.RestAssured.given;
@@ -18,7 +18,7 @@ public class ApiSteps extends AbstractSteps {
     public void aGetRequestIsMadeForFetchingDetailsForObjectWith(String id) {
         // Todo: improve this block
         final Response response = given().log().all().when().contentType(ContentType.JSON)
-                .get(ConfigurationFactory.getConfig().baseUri() + GET_SINGLE_OBJECT + id);
+                .get(ConfigFactory.getConfig().baseUri() + GET_SINGLE_OBJECT + id);
         getContext().setResponse(response);
     }
 

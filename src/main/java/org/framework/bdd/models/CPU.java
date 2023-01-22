@@ -1,12 +1,9 @@
 package org.framework.bdd.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public enum CPU {
-    INTEL_I9("Intel Core i9"),
-    APPLE_M1("Apple Silicon M1");
+    @JsonProperty("Intel Core i9")
+    INTEL_I9,
 
-    String cpuName;
-
-    CPU(String cpuName) {
-        this.cpuName = cpuName;
-    }
 }
