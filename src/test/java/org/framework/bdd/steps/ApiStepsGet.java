@@ -11,14 +11,13 @@ import org.framework.bdd.utils.ConfigFactory;
 import org.junit.Assert;
 
 import static io.restassured.RestAssured.given;
-import static org.framework.bdd.constants.Endpoints.GET_SINGLE_OBJECT;
+import static org.framework.bdd.constants.Endpoints.ENDPOINT;
 
-public class ApiSteps extends AbstractSteps {
+public class ApiStepsGet extends AbstractSteps {
     @Given("a get request is made for fetching details for object with {string}")
     public void aGetRequestIsMadeForFetchingDetailsForObjectWith(String id) {
-        // Todo: improve this block
-        final Response response = given().log().all().when().contentType(ContentType.JSON)
-                .get(ConfigFactory.getConfig().baseUri() + GET_SINGLE_OBJECT + id);
+        // Todo: improve this block - use request specs
+        final Response response = getContext().getRequest().get(ENDPOINT + id);
         getContext().setResponse(response);
     }
 
