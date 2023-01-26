@@ -2,7 +2,6 @@ package org.framework.bdd.steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.framework.bdd.models.CPU;
 import org.framework.bdd.models.Gadget;
@@ -17,8 +16,7 @@ public class ApiStepsPost extends AbstractSteps {
     public void aPOSTRequestIsMadeWithAndDefaultData(String name, String id) {
         MiscellaneousData data = MiscellaneousData.builder().cpuModel(CPU.INTEL_I9).price(2300.00).build();
         Gadget gadget = Gadget.builder().name(name).id(id).data(data).build();
-        // Todo: use request spec
-        final Response response = getContext().getRequest().contentType(ContentType.JSON).body(gadget).post(ENDPOINT);
+        final Response response = getContext().getRequest().body(gadget).post(ENDPOINT);
         getContext().setResponse(response);
     }
 

@@ -1,5 +1,6 @@
 package org.framework.bdd.utils;
 
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -37,7 +38,7 @@ public enum TestContext {
     public RequestSpecification getRequest() {
         if (null == get(REQUEST)) {
             set(REQUEST, given().log()
-                    .all());
+                    .all().contentType(ContentType.JSON));
         }
 
         return get(REQUEST);
