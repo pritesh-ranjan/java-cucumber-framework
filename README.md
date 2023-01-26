@@ -9,6 +9,7 @@ We will be testing https://restful-api.dev/.
 - Uses REST-Assured for API testing
 - Generates Cucumber reports for test results
 - Implements BDD methodology
+- Allows for easy environment switching using dynamic config keys. example: dev to qa to uat environment
 
 ## Prerequisites
 - Java 8 or later
