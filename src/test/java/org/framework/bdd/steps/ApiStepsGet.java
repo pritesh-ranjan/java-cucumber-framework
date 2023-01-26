@@ -4,13 +4,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.framework.bdd.models.Gadget;
-import org.framework.bdd.utils.ConfigFactory;
 import org.junit.Assert;
 
-import static io.restassured.RestAssured.given;
 import static org.framework.bdd.constants.Endpoints.ENDPOINT;
 
 public class ApiStepsGet extends AbstractSteps {
@@ -23,7 +20,7 @@ public class ApiStepsGet extends AbstractSteps {
 
     @When("response has status {int}")
     public void responseHasStatus(int statusCode) {
-        Assert.assertEquals(getContext().getResponse().getStatusCode(), statusCode);
+        Assert.assertEquals(statusCode, getContext().getResponse().getStatusCode());
     }
 
     @Then("response has valid schema")

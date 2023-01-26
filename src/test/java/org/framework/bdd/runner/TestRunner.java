@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber-report.json",
                 "html:target/cucumber-reports/report.html"},
         glue = {"org.framework.bdd.steps"},
-        tags = "@get",
+//        tags = "@get",
         dryRun = false)
 public class TestRunner {
 }
