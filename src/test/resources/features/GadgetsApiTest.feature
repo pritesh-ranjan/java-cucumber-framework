@@ -1,5 +1,8 @@
 Feature: Gadgets API tests
 
+  Background: reset the test context
+    Given test context is reset
+
   Scenario Outline: Get object by id
     Given a get request is made for fetching details for object with "<id>"
     When response has status 200

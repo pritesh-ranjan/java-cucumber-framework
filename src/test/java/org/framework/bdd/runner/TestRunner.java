@@ -4,8 +4,11 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
+import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        snippets = CAMELCASE,
         features = "classpath:features",
         plugin = {
                 "json:target/cucumber-report.json",
