@@ -8,6 +8,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+//        publish = true, publish to reports.cucumber.io
         snippets = CAMELCASE,
         features = "classpath:features",
         plugin = {

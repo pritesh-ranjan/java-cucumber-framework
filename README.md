@@ -48,3 +48,5 @@ Cucumber reporting is integrated with the framework. After running the tests, th
 ## Extensibility
 The framework is built to be easily extensible and can be integrated with other testing libraries and frameworks.
 
+Link to the article: https://dev.to/pritesh_ranjan/java-cucumber-maven-test-automation-framework-a-comprehensive-guide-to-restful-api-testing-35lp
+
