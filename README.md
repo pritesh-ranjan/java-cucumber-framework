@@ -28,10 +28,16 @@ We will be testing https://restful-api.dev/.
 
 ## Framework Structure
 The framework is structured in the following way:
-- `src/main/java`: contains abstract classes, test context, utilities, models, constants and config reader
+- `src/main/java`: contains abstract classes, test context, custom exceptions, utilities, models, constants and config reader
 - `src/main/resources`: contains the feature files and test data
 - `src/test/java`: contains the step definitions and test runners
 - `pom.xml`: contains the dependencies and build configuration
+
+## Exception Handling
+This framework allows creation of custom exception classes. All custom exception inherit from the FrameworkException class.
+
+## Utilities
+The utilities package contain classes contain important functionalities that are shared across the framework. For example the test context class, configuration reader (which reads config details from a properties file). It can also contain webdriver manager classes, database connection manager classes, etc.  
 
 ## Test Context
 Test context is implemented using the Singleton pattern and the Factory pattern. Test context classes are located in the `src/main/java` directory and are used to store and retrieve test data between steps.
